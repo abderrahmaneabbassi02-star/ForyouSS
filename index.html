@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="hearts">
+    <span>❤️</span><span>💖</span><span>💕</span><span>💘</span><span>❤️</span>
+  </div>
+
+  <div class="card">
+    <h1>Hello Saloumti 💕</h1>
+
+    <!-- Typing animation (same message, animated) -->
+    <p id="typing"
+       data-text="This website took me hours… I may not know how to code perfectly 😅 But I know exactly who I want 🫶">
+    </p>
+
+    <h2 id="question" style="display:none;">
+      Will you be my Valentine? 💌
+    </h2>
+
+    <div class="buttons" id="buttons" style="display:none;">
+      <button class="yes" onclick="yesClicked()">HELL YES 💖</button>
+      <button class="hell-yes" id="no">No 😅</button>
+    </div>
+
+    <div id="final" style="display:none;">
+      💖 You just made me the happiest person alive 💍<br>
+      Happy Valentine’s Day, Hubi 💕
+    </div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script src="script.js"></script>
+<audio id="loveSong">
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

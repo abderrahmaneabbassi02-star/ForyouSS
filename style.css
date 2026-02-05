@@ -1,0 +1,138 @@
+/* Typing Text */
+#typing {
+  min-height: 90px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Final Message */
+#final {
+  display: none;
+  font-size: 1.6rem;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Confetti Canvas */
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff4e8c, #ff9a9e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 50px 40px;
+  text-align: center;
+  color: white;
+  max-width: 420px;
+  animation: fadeIn 1.2s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.yes {
+  background: white;
+  color: #ff4e8c;
+}
+
+.yes:hover {
+  transform: scale(1.1);
+  background: #ffe6ef;
+}
+
+.hell-yes {
+  background: #ff005d;
+  color: white;
+  box-shadow: 0 10px 25px rgba(255,0,93,0.5);
+}
+
+.hell-yes:hover {
+  transform: scale(1.15) rotate(-2deg);
+  background: #ff2f7a;
+}
+
+/* Floating Hearts */
+.hearts span {
+  position: absolute;
+  bottom: -50px;
+  animation: float 8s infinite ease-in;
+  font-size: 2rem;
+}
+
+.hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.hearts span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.hearts span:nth-child(4) { left: 70%; animation-delay: 1s; }
+.hearts span:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
